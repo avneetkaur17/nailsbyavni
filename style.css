@@ -123,7 +123,7 @@ main{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-.photos img, .photo-gallery #img{
+.photos img, .photo-gallery .img{
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -133,7 +133,7 @@ main{
 }
 
 .photos img:hover,
-.photo-gallery #img:hover {
+.photo-gallery .img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
@@ -239,6 +239,38 @@ main{
 
 
 @media (max-width: 768px) {
+  .background {
+    background-attachment: scroll;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  main {
+    padding: 1rem;
+    margin: 1rem auto 0 auto;
+  }
+
+  .photos {
+    margin: 2rem auto 0 auto;
+    gap: 1.5rem;
+  }
+
+  .photo-gallery {
+    margin: 2rem auto 0 auto;
+    gap: 2rem;
+  }
+
+  .quote-section {
+    padding: 3rem 1rem;
+    margin: 3rem 0;
+  }
+
+  .connect {
+    margin: 2rem auto 0 auto;
+    padding: 1.5rem 1rem;
+  }
 
   .container {
     flex-direction: column;
@@ -249,7 +281,6 @@ main{
 
   .title {
     font-size: 1.2rem;
-    text-align: center;
   }
 
   #navbar {
@@ -277,12 +308,13 @@ main{
   }
 
   .photos img,
-  .photo-gallery #img {
-    width: 90vw;
+  .photo-gallery .img {
+    width: 100%;
+    max-width: 85vw;
   }
 
   .quote-line {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .button {
@@ -302,9 +334,61 @@ main{
     font-size: 1rem;
   }
 }
-@media (max-width: 768px) {
-  .background {
-    background-attachment: scroll;
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .infobox {
+    padding: 1rem;
+  }
+
+  .infobox h2 {
+    font-size: 1.3rem;
+  }
+
+  .infobox p {
+    font-size: 0.95rem;
+  }
+
+  .photos,
+  .photo-gallery {
+    gap: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .quote-line {
+    font-size: 1.3rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  #navbar a {
+    font-size: 0.85rem;
   }
 }
+@media (min-width: 1200px) {
+  .container {
+    padding: 1rem 4rem;
+  }
 
+  main {
+    padding: 3rem;
+  }
+
+  .infobox {
+    padding: 3rem 4rem;
+  }
+
+  .photos {
+    gap: 6rem;
+  }
+
+  .photo-gallery {
+    gap: 8rem;
+  }
+}
