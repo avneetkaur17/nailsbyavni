@@ -133,7 +133,7 @@ main{
 }
 
 .photos img:hover,
-.photo-gallery .img:hover {
+.photo-gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
@@ -308,7 +308,7 @@ main{
   }
 
   .photos img,
-  .photo-gallery .img {
+  .photo-gallery img {
     width: 100%;
     max-width: 85vw;
   }
