@@ -6,17 +6,19 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url(images/bg.PNG);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
     opacity: 0.3;
     z-index: -1;
+    overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 #header {
@@ -243,15 +245,14 @@ main{
 @media (max-width: 768px) {
   .background {
     position: fixed;
-    background-attachment: scroll;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    background-position: center center;
+    height: 100dvh;
+  }
+  .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   body {
