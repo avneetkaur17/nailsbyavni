@@ -126,7 +126,7 @@ main{
 }
 .photos img, .photo-gallery #img{
   width: 300px;
-  height: auto;
+  height: 400px;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -241,10 +241,9 @@ main{
 
 @media (max-width: 768px) {
   .background {
-    position: absolute;
+    position: fixed;
     background-attachment: scroll;
-    min-height: 100%;
-    height: auto;
+    background-size: auto 200%;
   }
 
   body {
@@ -285,22 +284,27 @@ main{
 
   .title {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
 
   #navbar {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   #navbar a {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
     min-width: unset;
+    flex-shrink: 1;
   }
 
   .infobox {
     width: 95%;
     padding: 1.5rem;
+    justify-content: center;
   }
 
   .infobox h2 {
@@ -313,8 +317,8 @@ main{
 
   .photos img,
   .photo-gallery #img {
-    width: 100%;
-    max-width: 85vw;
+    width: 250px;
+    height: 300px;
   }
 
   .quote-line {
